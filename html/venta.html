@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Venta</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+    <link rel="stylesheet" href="../css/estadisticas.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCJuL7dVIHu-jdomIBK8rOrnwA1TsyaPgs",
+            authDomain: "boomer-964b7.firebaseapp.com",
+            databaseURL: "https://boomer-964b7.firebaseio.com",
+            projectId: "boomer-964b7",
+            storageBucket: "boomer-964b7.appspot.com",
+            messagingSenderId: "386044112007",
+            appId: "1:386044112007:web:7f462931bd25de604c9c22",
+            measurementId: "G-MBLKFQPCJR"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/logo.png" alt="error">
+            </div>
+            <div class="icono" id="icono">
+                <span>&#9776;</span>
+            </div>
+            <div class="enlaces uno" id="enlaces">
+                <a href="Nuevo-cliente.html">Nuevo cliente</a>
+                <a href="Venta.html">Venta</a>
+                <a href="estadisticas.html">Estadisticas</a>
+                <a href="mi-cuenta.html">Mi cuenta</a>
+                <a href="javascript:cerrarSesion()">Cerrar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <script src="../js/estadisticas.js"></script>
+    <script src="../js/cerrarSesion.js"></script>
+</body>
+
+</html>

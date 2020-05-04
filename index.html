@@ -1,65 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 
-<head>
-  <meta charset="utf-8">
-  <title>Iniciar Sesión</title>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyCJuL7dVIHu-jdomIBK8rOrnwA1TsyaPgs",
+        authDomain: "boomer-964b7.firebaseapp.com",
+        databaseURL: "https://boomer-964b7.firebaseio.com",
+        projectId: "boomer-964b7",
+        storageBucket: "boomer-964b7.appspot.com",
+        messagingSenderId: "386044112007",
+        appId: "1:386044112007:web:7f462931bd25de604c9c22",
+        measurementId: "G-MBLKFQPCJR",
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </head>
 
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyCJuL7dVIHu-jdomIBK8rOrnwA1TsyaPgs",
-      authDomain: "boomer-964b7.firebaseapp.com",
-      databaseURL: "https://boomer-964b7.firebaseio.com",
-      projectId: "boomer-964b7",
-      storageBucket: "boomer-964b7.appspot.com",
-      messagingSenderId: "386044112007",
-      appId: "1:386044112007:web:7f462931bd25de604c9c22",
-      measurementId: "G-MBLKFQPCJR"
-    };
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
+  <body>
+    <div class="login-form">
+      <img src="assets/boomer.png" alt="logo boomer" />
 
-</head>
+      <div class="txtb">
+        <input id="email" type="email" />
+        <span data-placeholder="Correo electronico"></span>
+      </div>
 
-<body>
+      <div class="txtb">
+        <input id="password" type="password" />
+        <span data-placeholder="Contraseña"></span>
+      </div>
 
-  <div class="login-form">
+      <button onclick="iniciarSesion()" class="logbtn">Iniciar sesión</button>
 
-    <img src="assets/boomer.png" alt="logo boomer">
-
-    <div class="txtb">
-      <input id="email" type="email">
-      <span data-placeholder="Correo electronico"></span>
+      <div class="bottom-text">
+        ¿Aún no tienes cuenta? <a href="html/registrar.html">Crear cuenta</a>
+        <br />
+      </div>
+      <div class="bottom-text">
+        ¿Olvidaste tu Contraseña?
+        <a href="html/recuperar-cuenta.html">Recuperar cuenta</a> <br />
+      </div>
     </div>
 
-    <div class="txtb">
-      <input id="password" type="password">
-      <span data-placeholder="Contraseña"></span>
-    </div>
-
-    <button onclick="iniciarSesion()" class="logbtn">Iniciar sesión</button>
-
-    <div class="bottom-text">
-      ¿Aún no tienes cuenta? <a href="html/registrar.html">Crear cuenta</a> <br>
-
-    </div>
-    <div class="bottom-text">
-      ¿Olvidaste tu Contraseña? <a href="html/recuperar-cuenta.html">Recuperar cuenta</a> <br>
-
-    </div>
-
-
-  </div>
-
-  <script src="js/index.js"></script>
-</body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>

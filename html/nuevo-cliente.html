@@ -2,19 +2,22 @@
 <html lang="es">
 
 <head>
+    <!-- titulo de la pagina  -->
     <title>Nuevo cliente</title>
 
+    <!-- metadatos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- implementacion de firebase  -->
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <!-- implementacion de boostrap  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="../css/nuevo-cliente.css">
-    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <script>
         var firebaseConfig = {
             apiKey: "AIzaSyCJuL7dVIHu-jdomIBK8rOrnwA1TsyaPgs",
@@ -30,9 +33,15 @@
         firebase.analytics();
     </script>
 
+    <!-- imagen favicon -->
+    <link rel="stylesheet" href="../css/nuevo-cliente.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+   
 </head>
 
 <body>
+
+  <!-- Menu de opciones header -->
     <header>
         <nav>
             <div class="logo">
@@ -50,120 +59,124 @@
             </div>
         </nav>
     </header>
+
+    <!-- Contenido de la app web usando libreria Boostrap-->
     <main>
         <div class="container bg-white">
 
-            <div class="row col-12 ">
+            <h3 class="m-3 text-center">Registrar Nuevo Cliente</h3>
 
-             
-                <h4 class="m-3 text-center">Registrar Nuevo Cliente</h4>
-
-                <div class="row">
-                    <div class="col-lg-6 mb-3">
-                      <label for="firstName">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" placeholder="Nombre del cliente">
-                      <div class="invalid-feedback">
-                        Valid first name is required.
-                      </div>
+            <div class="row">
+                <div class="col-lg-4  mb-3">
+                    <label for="firstName">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre del cliente">
+                    <div class="invalid-feedback">
+                    Valid first name is required.
                     </div>
-                    <div class="col-lg-3 mb-3">
-                      <label for="lastName">Apellido Paterno</label>
-                      <input type="text" class="form-control" id="apellidoPaterno" placeholder="Apellido Paterno del cliente">
-                      <div class="invalid-feedback">
-                        Valid last name is required.
-                      </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <label for="lastName">Apellido Materno</label>
-                        <input type="text" class="form-control" id="apellidoMaterno" placeholder="Apellido Materno del cliente">
-                        <div class="invalid-feedback">
-                          Valid last name is required.
-                        </div>
-                      </div>
-                 
-             
-
-
-
-
-
-
-                <div class="col-6 col-md-6 mb-4" data-provide="datepicker">
-                    <label for="lastName">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="fecha">
                 </div>
+                <div class="col-lg-4  mb-3">
+                    <label for="lastName">Apellido Paterno</label>
+                    <input type="text" class="form-control" id="apellidoPaterno" placeholder="Apellido Paterno del cliente">
+                    <div class="invalid-feedback">
+                    Valid last name is required.
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <label for="lastName">Apellido Materno</label>
+                    <input type="text" class="form-control" id="apellidoMaterno" placeholder="Apellido Materno del cliente">
+                    <div class="invalid-feedback">
+                    Valid last name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                       <div class="col-6 col-md-6 mb-4" data-provide="datepicker">
+                       <label for="lastName">Fecha de Nacimiento</label>
+                       <input type="date" class="form-control" id="fecha">
+                   </div>
                
-                    <div class="custom-control custom-radio col-3 col-md-3 m-auto text-center">
-                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input " checked required>
-                      <label class="custom-control-label" for="credit">Mujer</label>
-                    </div>
-                    <div class="custom-control custom-radio col-3 col-md-3 m-auto text-center">
-                      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                      <label class="custom-control-label" for="debit">Hombre</label>
-                    </div>
-                  
+                   <div class="custom-control custom-radio col-3 col-md-3 m-auto text-center">
+                       <input id="credit" name="paymentMethod" type="radio" class="custom-control-input " checked required>
+                       <label class="custom-control-label" for="credit">Mujer</label>
+                   </div>
 
-
+                   <div class="custom-control custom-radio col-3 col-md-3 m-auto text-center">
+                       <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                       <label class="custom-control-label" for="debit">Hombre</label>
+                   </div>
+            </div>
             
-
-                  <div class="col-md-5 mb-4">
-                    <label for="Country">Col/Fracc/Priv</label>
-                    <select class="custom-select d-block w-100" id="Country" required>
+            <div class="row">
+                   <div class="col-md-5 mb-4">
+                      <label for="Country">Col/Fracc/Priv</label>
+                      <select class="custom-select d-block w-100" id="Country" required>
                       <option value="">Choose...</option>
                       <option>Santa Fe</option>
                       <option>Providencia</option>
                       <option>Valle alto</option>
                       <option>villas del rio</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Please select a valid Colonia.
-                    </div>
-                  </div>
-                  <div class="col-md-5  col-8 mb-4">
-                      <label for="Calle">Calle</label>
-                      <input type="text" class="form-control" id="Calle" placeholder="Calle" required>
+                      </select>
                       <div class="invalid-feedback">
-                        Zip code required.
+                      Please select a valid Colonia.
                       </div>
-                    </div>
+                   </div>
+
+                   <div class="col-md-5  col-8 mb-4">
+                       <label for="Calle">Calle</label>
+                       <input type="text" class="form-control" id="Calle" placeholder="Calle" required>
+                       <div class="invalid-feedback">
+                       Zip code required.
+                       </div>
+                   </div>
+
                   <div class="col-md-2 col-4 mb-4">
-                    <label for="Numero">Numero</label>
-                    <input type="text" class="form-control" id="Numero" placeholder="#" required>
-                    <div class="invalid-feedback">
+                      <label for="Numero">Numero</label>
+                      <input type="text" class="form-control" id="Numero" placeholder="#" required>
+                      <div class="invalid-feedback">
                       Numero Requerido.
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6  col-8 mb-4">
+                      </div>
+                  </div>    
+            </div>
+              
+            <div class="row">
+                      <div class="col-12 col-md-6  col-8 mb-4">
                       <label for="Celular">Celular</label>
                       <input type="text" class="form-control" id="Celular" placeholder="Telefono o celular" required>
                       <div class="invalid-feedback">
-                         Celular Requerido.
+                      Celular Requerido.
                       </div>
-                   </div>
+                      </div>
+             
             </div>
-
-            <div class="col-12 mb-4">
-                <input type="file" accept="image/*" capture="camera">
-              </div>
-            
-
-            <div class="col-6 mb-4">
+               
+        <h4 class="m-3 text-center">Identificación</h4>  
+            <div class="row">
+                <div class="col-6 mb-4">
+                <img  class="ine" src="../assets/1.png" alt="hola">
+                </div>
+                <div class="col-6 mb-4">
+                <img class="ine" src="../assets/2.png" alt="hola">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 mb-4">
                 <button class="btn btn-success btn-lg btn-block" type="submit">Limpiar</button>
-              </div>
-              <div class="col-6 mb-4">
+                </div>
+                <div class="col-6 mb-4">
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Registrar</button>
-              </div>
-
-
-
+                </div>
+            </div>
             
-           </div>
-        
         </div>
     </main>
 
+  <!-- archivos js -->
+
     <script src="../js/nuevo-cliente.js"></script>
     <script src="../js/cerrarSesion.js"></script>
+
+  <!-- jquery que boostrap necesita -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 </body>
 

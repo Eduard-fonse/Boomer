@@ -52,101 +52,114 @@
     </header>
     <main>
         <div class="container bg-white">
-            <div class="row mt-4">
-              <div class="col-12 ">
+
+            <div class="row col-12 ">
+
+             
                 <h4 class="m-3 text-center">Registrar Nuevo Cliente</h4>
+
                 <div class="row">
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-6 mb-3">
                       <label for="firstName">Nombre</label>
                       <input type="text" class="form-control" id="nombre" placeholder="Nombre del cliente">
                       <div class="invalid-feedback">
                         Valid first name is required.
                       </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-3 mb-3">
                       <label for="lastName">Apellido Paterno</label>
                       <input type="text" class="form-control" id="apellidoPaterno" placeholder="Apellido Paterno del cliente">
                       <div class="invalid-feedback">
                         Valid last name is required.
                       </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-3 mb-3">
                         <label for="lastName">Apellido Materno</label>
                         <input type="text" class="form-control" id="apellidoMaterno" placeholder="Apellido Materno del cliente">
                         <div class="invalid-feedback">
                           Valid last name is required.
                         </div>
                       </div>
-                  </div>
-              </div>
-        
-            </div>
+                 
+             
 
 
-            <div class="row">
+
+
 
 
                 <div class="col-6 col-md-6 mb-4" data-provide="datepicker">
                     <label for="lastName">Fecha de Nacimiento</label>
                     <input type="date" class="form-control" id="fecha">
                 </div>
-                <div class="d-block my-3">
-                    <div class="custom-control custom-radio col-3 col-md-3">
-                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+               
+                    <div class="custom-control custom-radio col-3 col-md-3 m-auto text-center">
+                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input " checked required>
                       <label class="custom-control-label" for="credit">Mujer</label>
                     </div>
-                    <div class="custom-control custom-radio d-block col-3 col-md-3 ">
+                    <div class="custom-control custom-radio col-3 col-md-3 m-auto text-center">
                       <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
                       <label class="custom-control-label" for="debit">Hombre</label>
                     </div>
+                  
+
+
+            
+
+                  <div class="col-md-5 mb-4">
+                    <label for="Country">Col/Fracc/Priv</label>
+                    <select class="custom-select d-block w-100" id="Country" required>
+                      <option value="">Choose...</option>
+                      <option>Santa Fe</option>
+                      <option>Providencia</option>
+                      <option>Valle alto</option>
+                      <option>villas del rio</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid Colonia.
+                    </div>
                   </div>
-
-
+                  <div class="col-md-5  col-8 mb-4">
+                      <label for="Calle">Calle</label>
+                      <input type="text" class="form-control" id="Calle" placeholder="Calle" required>
+                      <div class="invalid-feedback">
+                        Zip code required.
+                      </div>
+                    </div>
+                  <div class="col-md-2 col-4 mb-4">
+                    <label for="Numero">Numero</label>
+                    <input type="text" class="form-control" id="Numero" placeholder="#" required>
+                    <div class="invalid-feedback">
+                      Numero Requerido.
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6  col-8 mb-4">
+                      <label for="Celular">Celular</label>
+                      <input type="text" class="form-control" id="Celular" placeholder="Telefono o celular" required>
+                      <div class="invalid-feedback">
+                         Celular Requerido.
+                      </div>
+                   </div>
             </div>
 
+            <div class="col-12 mb-4">
+                <input type="file" accept="image/*" capture="camera">
+              </div>
+            
 
-            <div class="row">
-                <div class="col-md-5 mb-4">
-                  <label for="country">Col/Fracc/Priv</label>
-                  <select class="custom-select d-block w-100" id="country" required>
-                    <option value="">Choose...</option>
-                    <option>Santa Fe</option>
-                    <option>Providencia</option>
-                    <option>Valle alto</option>
-                    <option>villas del rio</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select a valid Colonia.
-                  </div>
-                </div>
-                <div class="col-md-5  col-8 mb-4">
-                    <label for="zip">Calle</label>
-                    <input type="text" class="form-control" id="Calle" placeholder="Calle" required>
-                    <div class="invalid-feedback">
-                      Zip code required.
-                    </div>
-                  </div>
-                <div class="col-md-2 col-4 mb-4">
-                  <label for="zip">Numero</label>
-                  <input type="text" class="form-control" id="numero" placeholder="#" required>
-                  <div class="invalid-feedback">
-                    Zip code required.
-                  </div>
-                </div>
-                <div class="col-12 col-md-6  col-8 mb-4">
-                    <label for="zip">Celular</label>
-                    <input type="text" class="form-control" id="Calle" placeholder="Telefono o celular" required>
-                    <div class="invalid-feedback">
-                      Zip code required.
-                    </div>
-                  </div>
-                
+            <div class="col-6 mb-4">
+                <button class="btn btn-success btn-lg btn-block" type="submit">Limpiar</button>
+              </div>
+              <div class="col-6 mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Registrar</button>
               </div>
 
 
 
-
-          </div>
+            
+           </div>
+        
+        </div>
     </main>
 
     <script src="../js/nuevo-cliente.js"></script>

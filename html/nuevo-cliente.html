@@ -64,7 +64,8 @@
     <main>
         <div class="container bg-white">
 
-            <h3 class="m-3 text-center">Registrar Nuevo Cliente</h3>
+            <h3 class="mb-4 text-center">Registrar Nuevo Cliente</h3>
+<h4 class="m-3 text-center">Datos personales</h4>
 
             <div class="row">
                 <div class="col-lg-4  mb-3">
@@ -97,12 +98,12 @@
                    </div>
                
                    <div class="custom-control custom-radio col-3 col-md-3 m-auto text-center">
-                       <input id="credit" name="paymentMethod" type="radio" class="custom-control-input " checked required>
+                       <input id="credit" name="genero" type="radio" class="custom-control-input " checked required>
                        <label class="custom-control-label" for="credit">Mujer</label>
                    </div>
 
                    <div class="custom-control custom-radio col-3 col-md-3 m-auto text-center">
-                       <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                       <input id="debit" name="genero" type="radio" class="custom-control-input" required>
                        <label class="custom-control-label" for="debit">Hombre</label>
                    </div>
             </div>
@@ -111,7 +112,7 @@
                    <div class="col-md-5 mb-4">
                       <label for="Country">Col/Fracc/Priv</label>
                       <select class="custom-select d-block w-100" id="Country" required>
-                      <option value="">Choose...</option>
+                      <option value="">Seleccione Sector...</option>
                       <option>Santa Fe</option>
                       <option>Providencia</option>
                       <option>Valle alto</option>
@@ -121,7 +122,118 @@
                       Please select a valid Colonia.
                       </div>
                    </div>
+                   <div class="col-md-5  col-8 mb-4">
+                       <label for="Calle">Calle</label>
+                       <input type="text" class="form-control" id="Calle" placeholder="Calle" required>
+                       <div class="invalid-feedback">
+                       Zip code required.
+                       </div>
+                   </div>
 
+                  <div class="col-md-2 col-4 mb-4">
+                      <label for="Numero">Numero</label>
+                      <input type="number" class="form-control" id="Numero" placeholder="#" required>
+                      <div class="invalid-feedback">
+                      Numero Requerido.
+                      </div>
+                  </div>    
+            </div>
+              
+            <div class="row">
+                      <div class="col-md-6 mb-4">
+                      <label for="Celular">Celular</label>
+                      <input type="tel" class="form-control" id="Celular" placeholder="Telefono o celular" required>
+                      <div class="invalid-feedback">
+                      Celular Requerido.
+                      </div>
+                      </div>
+
+                       <div class="custom-control custom-radio col-4 col-md-2 m-auto text-center">
+                       <input id="1" name="tipoDeCasa" type="radio" class="custom-control-input " checked required>
+                       <label class="custom-control-label" for="1">Casa de renta</label>
+                   </div>
+
+                   <div class="custom-control custom-radio col-4 col-md-2 m-auto text-center">
+                       <input id="2" name="tipoDeCasa" type="radio" class="custom-control-input" required>
+                       <label class="custom-control-label" for="2">Casa Propia</label>
+                   </div>
+                       <div class="custom-control custom-radio col-4 col-md-2 m-auto text-center">
+                       <input id="3" name="tipoDeCasa" type="radio" class="custom-control-input" required>
+                       <label class="custom-control-label" for="3">Casa de familiar</label>
+                   </div>
+             
+            </div>
+
+            <div class="row">
+                <div class="col-12 mb-4">
+              <label for="comentarios">Informacion adicional</label>  
+              <textarea  class="comentarios" id="comentarios" placeholder="  Algun comentario del cliente"></textarea>
+                
+                </div>
+            </div>
+               
+        <h4 class="mb-4 text-center">Identificación</h4>  
+
+            <div class="row">
+                <div class="col-6 mb-4">
+                <img  class="ine" src="../assets/1.png" alt="hola">
+                </div>
+                <div class="col-6 mb-4">
+                <img class="ine" src="../assets/2.png" alt="hola">
+                </div>
+            </div>
+
+        <h4 class="mb-4 text-center">Datos de referencia</h4>  
+
+           <div class="row">
+                <div class="col-8  mb-3">
+                    <label for="firstName">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre de la referencia">
+                    <div class="invalid-feedback">
+                    Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-4 mb-4">
+                      <label for="Country">Parentesco</label>
+                      <select class="custom-select d-block w-100" id="Country" required>
+                      <option value="">Choose...</option>
+                      <option>Mamá</option>
+                      <option>Papá</option>
+                      <option>Abuela</option>
+                      <option>Abuelo</option>
+                      <option>Hijo</option>
+                      <option>Hija</option>
+                      <option>Tio</option>
+                      <option>Tia</option>
+                       <option>Hermano</option>
+                      <option>Hermana</option> 
+                      <option>Cuñado</option>
+                      <option>Cuñada</option> 
+                      <option>Suegra</option>
+                      <option>Suegro</option>
+                      <option>Hierno</option>
+                      <option>Hierna</option>
+                      </select>
+                      <div class="invalid-feedback">
+                      Please select a valid Colonia.
+                      </div>
+                   </div>
+            </div>
+
+            <div class="row">
+                   <div class="col-md-5 mb-4">
+                      <label for="Country">Col/Fracc/Priv</label>
+                      <select class="custom-select d-block w-100" id="Country" required>
+                      <option value="">Seleccione sector...</option>
+                      <option>Santa Fe</option>
+                      <option>Providencia</option>
+                      <option>Valle alto</option>
+                      <option>villas del rio</option>
+                      </select>
+                      <div class="invalid-feedback">
+                      Please select a valid Colonia.
+                      </div>
+                   </div>
                    <div class="col-md-5  col-8 mb-4">
                        <label for="Calle">Calle</label>
                        <input type="text" class="form-control" id="Calle" placeholder="Calle" required>
@@ -138,27 +250,18 @@
                       </div>
                   </div>    
             </div>
-              
-            <div class="row">
+
+             <div class="row">
                       <div class="col-12 col-md-6  col-8 mb-4">
                       <label for="Celular">Celular</label>
-                      <input type="text" class="form-control" id="Celular" placeholder="Telefono o celular" required>
+                      <input type="tel" class="form-control" id="Celular" placeholder="Telefono o celular" required>
                       <div class="invalid-feedback">
                       Celular Requerido.
                       </div>
                       </div>
              
-            </div>
-               
-        <h4 class="m-3 text-center">Identificación</h4>  
-            <div class="row">
-                <div class="col-6 mb-4">
-                <img  class="ine" src="../assets/1.png" alt="hola">
-                </div>
-                <div class="col-6 mb-4">
-                <img class="ine" src="../assets/2.png" alt="hola">
-                </div>
-            </div>
+            </div> 
+
             <div class="row">
                 <div class="col-6 mb-4">
                 <button class="btn btn-success btn-lg btn-block" type="submit">Limpiar</button>
@@ -167,6 +270,7 @@
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Registrar</button>
                 </div>
             </div>
+        
             
         </div>
     </main>

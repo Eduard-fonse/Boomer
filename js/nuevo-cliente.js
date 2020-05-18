@@ -119,6 +119,7 @@ function registrar() {
         .then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
 
+
         })
         .catch(function (error) {
             console.error("Error adding document: ", error);
@@ -169,22 +170,24 @@ function animacionMenu() {
 }
 animacionMenu()
 
-// funcion controla el estado de seccion de la aplicación
-// function observador() {
-//     firebase.auth().onAuthStateChanged(function (user) {
-//         if (user) {
-//             // User is signed in.
-//             console.log("User is signed in.");
 
-//         } else {
-//             // User is signed out.
-//             console.log("User is signed out");
+// funcion que controla si la seccion esta activa
+function observador() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // User is signed in.
+            console.log("User is signed in.");
 
-//         }
-//     });
+        } else {
+            // User is signed out.
+            console.log("User is signed out");
 
-// }
-// observador();
+        }
+    });
+
+}
+observador();
+
 
 
 
@@ -199,7 +202,7 @@ function tipoVivienda() {
     } else if (propio) {
         return "Casa propia";
     } else if (familiar) {
-        return "Casa De Familair";
+        return "Casa De Familiar";
     }
     return genero
 }

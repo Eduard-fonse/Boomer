@@ -1,116 +1,110 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    background-color: #f9fbfd;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #f9fbfd;
 }
 
-
 header nav {
-    height: 75px;
-    background: #38b6ff;
-    display: flex;
-    justify-content: space-between
+  height: 75px;
+  background: #38b6ff;
+  display: flex;
+  justify-content: space-between;
 }
 
 .icono {
-    display: none;
+  display: none;
 }
 
 .enlaces {
-    display: flex;
-    height: 100%;
-    width: 30%;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .enlaces a {
-    border-bottom: 2px solid transparent;
-    padding: 4px 0;
-    transition: 0.7s ease-out;
-    color: white;
-    text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding: 4px 0;
+  transition: 0.7s ease-out;
+  color: white;
+  text-decoration: none;
 }
 
 .enlaces a:hover {
-  
-    border-bottom: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 nav .logo {
-    height: 100%;
-    margin-left: 10px;
+  height: 100%;
+  margin-left: 10px;
 }
 
 nav .logo img {
-    object-fit: cover;
-    height: inherit;
+  object-fit: cover;
+  height: inherit;
 }
 
-@media screen and (max-width:1024px) {
-    .icono {
-        display: flex;
-        justify-content: center;
-        height: 75px;
-        align-items: center;
-        color: white;
-        background: transparent;
-        padding: 20px;
-        z-index: 100;
-        cursor: pointer;
-        margin-right: 10px;
-    }
+@media screen and (max-width: 1024px) {
+  .icono {
+    display: flex;
+    justify-content: center;
+    height: 75px;
+    align-items: center;
+    color: white;
+    background: transparent;
+    padding: 20px;
+    z-index: 100;
+    cursor: pointer;
+    margin-right: 10px;
+  }
 
+  .enlaces {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    transition: all 1s ease;
+    background: #38b6ff;
+  }
 
-    .enlaces {
-        position: fixed;
-        height: 100vh;
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        transition: all 1s ease;
-        background: #38b6ff;
-    }
+  .uno {
+    -webkit-clip-path: circle(0% at 100% 0%);
+    clip-path: circle(0% at 100% 0%);
+  }
 
-    .uno {
-
-        -webkit-clip-path: circle(0% at 100% 0%);
-        clip-path: circle(0% at 100% 0%);
-
-    }
-
-    .dos {
-
-        -webkit-clip-path: circle(150% at 100% 0%);
-        clip-path: circle(150% at 100% 0%);
-
-    }
+  .dos {
+    -webkit-clip-path: circle(150% at 100% 0%);
+    clip-path: circle(150% at 100% 0%);
+  }
 }
 
-.form-container{
-    margin: 10px auto auto auto;
-    border-radius: 10px;
-    width: 50%;
-    height: 700px;
+.form-container {
+  margin: 10px auto auto auto;
+  border-radius: 10px;
+  width: 50%;
+  height: 700px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 450px) {
+  .form-container {
+    top: 75px;
+    width: 100%;
+    z-index: -1;
+    height: 10000px;
+    position: absolute;
     background-color: #fff;
-
+  }
 }
 
-@media screen and (max-width:450px) {
-    .form-container{
-        top: 75px;
-        width: 100%;
-        z-index: -1;
-        height: 10000px;
-        position: absolute;
-        background-color: #fff;
-    
-    }
-   
+.desaparecer {
+  display: none;
 }

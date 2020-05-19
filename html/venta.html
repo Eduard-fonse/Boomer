@@ -78,18 +78,29 @@
           </div>
         </div>
         <!-- datos del cliente porterior a la busqueda-->
-        <h4 class="m-3 text-center">Datos del cliente</h4>
-        <div class="row displayCliente" onclick="seleccionarCliente();">
-          <div class="col-12 col-lg-12 mb-1">
+
+        <div class="row displayCliente estilo" onclick="seleccionarCliente();">
+          <h4 class="m-3">Datos del cliente</h4>
+          <div class="col-12 col-lg-12 m-2">
             <label>HECTOR EDUARDO FONSECA SILVA</label><br />
             <label>Calle: San Marcos 3193</label><br />
             <label>Providencia, Culiacán, Sinaloa, México</label><br />
             <label>Telefono: 66-71-36-06-57</label>
           </div>
         </div>
-        <!-- informacion crediticia del cliente-->
-        <h4 class="m-3 text-center">Venta de producto</h4>
-        <div class="row displayVenta desaparecer">
+
+        <!-- agregar formulario responsivo para colocar una venta-->
+        <div class="row mt-4 displayVenta">
+          <h4 class="m-3 text-center">Venta de producto</h4>
+          <div class="btn-group col-12 col-lg-12 mb-1">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Credito</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Contado</button>
+          </div>
+        </div>
+
+        <!-- tipo de venta-->
+
+        <div class="row displayCliente desaparecer">
           <div class="col-4 mb-1">
             <label>Limite de Credito: $3,500.00</label>
           </div>
@@ -100,7 +111,6 @@
             <label>Status: Pasivo</label>
           </div>
         </div>
-        <!-- agregar formulario responsivo para colocar una venta-->
       </div>
     </main>
 

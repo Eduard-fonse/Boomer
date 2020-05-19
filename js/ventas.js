@@ -171,27 +171,14 @@ function animacionMenu() {
 animacionMenu()
 
 
-// funcion que controla si la seccion esta activa
-// function observador() {
-//     firebase.auth().onAuthStateChanged(function (user) {
-//         if (user) {
-//             // User is signed in.
-//             console.log("User is signed in.");
 
-//         } else {
-//             // User is signed out.
-//             console.log("User is signed out");
-
-//         }
-//     });
-
-// }
-// observador();
 
 function limpiar() {
-    document.getElementById("id").value = "";
-    document.getElementById("id").focus();
-    document.querySelector(".displayCliente").classList.toggle('opcion');
+
+    document.getElementById("cliente").value = "";
+    document.getElementById("cliente").focus();
+    document.querySelector(".displayCliente").classList.add('desaparecer');
+    document.querySelector(".displayVenta").classList.add('desaparecer');
 
 };
 
@@ -203,16 +190,8 @@ function seleccionarCliente() {
 
 
 function identificar() {
+    document.querySelector(".displayCliente").classList.remove('desaparecer');
 
-    var cliente = document.getElementById(id).value;
-
-    db.collection("users").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-
-            console.log(`${doc.data().Nombre}`);
-
-        });
-    });
 
 };
 

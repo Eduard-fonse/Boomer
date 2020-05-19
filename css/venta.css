@@ -108,3 +108,7 @@ nav .logo img {
 .desaparecer {
   display: none;
 }
+.estilo {
+  border: solid 2px blue;
+  border-radius: 20px;
+}

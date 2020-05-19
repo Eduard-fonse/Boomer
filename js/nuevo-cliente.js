@@ -42,7 +42,7 @@ function limpiar() {
 // funcion del boton registrar conectar con la base de datos
 function registrar() {
 
-
+    var $curp = document.getElementById("curp").value;
     var $nombre = document.getElementById("nombre").value;
     var $apellidoPaterno = document.getElementById("apellidoPaterno").value;
     var $apellidoMaterno = document.getElementById("apellidoMaterno").value;
@@ -65,7 +65,9 @@ function registrar() {
 
 
 // verifica y notifica campos vacios
-    if ($nombre == "") {
+    if ($curp == ""){
+       document.getElementById("curp").focus();
+    }else if ($nombre == "") {
        document.getElementById("nombre").focus();
     } else if ($apellidoPaterno == "") {
         document.getElementById("apellidoPaterno").focus();
@@ -97,6 +99,7 @@ function registrar() {
     }else{
 
     db.collection("users").add({
+        Curp: $curp,
         Nombre: $nombre,
         ApellidoPaterno: $apellidoPaterno,
         ApellidoMaterno: $apellidoMaterno,
@@ -172,21 +175,21 @@ animacionMenu()
 
 
 // funcion que controla si la seccion esta activa
-function observador() {
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            // User is signed in.
-            console.log("User is signed in.");
+// function observador() {
+//     firebase.auth().onAuthStateChanged(function (user) {
+//         if (user) {
+//             // User is signed in.
+//             console.log("User is signed in.");
 
-        } else {
-            // User is signed out.
-            console.log("User is signed out");
+//         } else {
+//             // User is signed out.
+//             console.log("User is signed out");
 
-        }
-    });
+//         }
+//     });
 
-}
-observador();
+// }
+// observador();
 
 
 

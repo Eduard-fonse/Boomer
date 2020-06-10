@@ -1,7 +1,6 @@
 
 
 function cerrarSesion() {
-
     firebase.auth().signOut()
         .then(function () {
             console.log('salimos')

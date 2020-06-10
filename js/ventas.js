@@ -190,11 +190,83 @@ function seleccionarCliente() {
 
 
 function identificar() {
-    document.querySelector(".displayCliente").classList.remove('desaparecer');
+
+    var usuario = document.querySelector(".usuario").value;
+
+
+    db.collection("users").where("Curp", "==", usuario)
+        .get()
+        .then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+
+                document.querySelector(".displayCliente").classList.remove('desaparecer');
+                document.querySelector(".a1").innerHTML = doc.data().Nombre + " " + doc.data().ApellidoPaterno + " " + doc.data().ApellidoMaterno;
+                document.querySelector(".a2").innerHTML = "Calle: " + doc.data().Calle + " " + doc.data().NumeroDeCasa;
+                document.querySelector(".a3").innerHTML = doc.data().Colonia + ", Culiacán, Sinaloa, México";
+                document.querySelector(".a4").innerHTML = "Telefono: " + doc.data().Celular;
+
+
+            });
+        })
+        .catch(function (error) {
+            console.log("Error getting documents: ", error);
+        });
 
 
 };
 
+
+
+var contador = 1;
+function add(){
+contador ++;
+
+
+if (contador > 5){
+contador = 5;
+
+}
+ document.querySelector(".articulo" + contador).classList.remove('desaparecer');   
+
+
+
+};
+
+
+
+function remove(numero){
+
+switch (numero) {
+case 2:
+       document.querySelector(".articulo2").classList.add('desaparecer'); 
+contador --;
+        break;
+case 3:
+        document.querySelector(".articulo3").classList.add('desaparecer');
+contador --;
+        break;
+case 4:
+        document.querySelector(".articulo4").classList.add('desaparecer');
+contador --;
+        break;
+case 5:
+        document.querySelector(".articulo5").classList.add('desaparecer');
+        contador --;
+        break;
+
+    default:
+        Console.log("Error");
+        break;
+}
+
+};
+
+
+function credito(){
+ document.querySelector(".displayCliente").classList.remove('desaparecer');
+document.querySelector(".articulo1").classList.remove('desaparecer');
+
+};
 
 
 

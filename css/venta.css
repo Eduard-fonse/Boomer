@@ -109,6 +109,8 @@ nav .logo img {
   display: none;
 }
 .estilo {
-  border: solid 2px blue;
-  border-radius: 20px;
+  border: solid 5px #007bff;
+  border-radius: 10PX;
+ 
+  
 }
